@@ -1,0 +1,7 @@
+{
+  "name": "rsd-monitor",
+  "version": "1.0.0",
+  "description": "RSD monitor",
+  "main": "main.js",
+  "author": "Ilia Benditkis <benditki@gmail.com>"
+}
