@@ -1,0 +1,49 @@
+body, nav, main, section, div, a, p {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #ddd;
+    width: 250px;
+    padding-top: 20px;
+}
+
+nav a {
+    width: 200px;
+    background: #ccc;
+    margin: 5px 15px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+main {
+    position: fixed;
+    left: 250px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+}
+
+#logs-table {
+    min-height: 300px;
+    border: 1 solid #222;
+    background: #def;
+}
