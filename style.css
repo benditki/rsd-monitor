@@ -1,11 +1,60 @@
-body, nav, main, section, div, a, p {
+@font-face {
+    font-family: 'Roboto-medium';
+    src: url('fonts/Roboto-Medium-webfont.woff');
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('fonts/Roboto-Regular-webfont.woff');
+}
+
+@font-face {
+    font-family: 'pe-icon-7-stroke';
+    src: url('fonts/Pe-icon-7-stroke.woff');
+}
+
+@font-face {
+    font-family: 'dec-terminal-modern';
+    src: url('fonts/_decterm.ttf');
+}
+
+/*------------------------
+	base class definition
+-------------------------*/
+
+i {
+    display: inline-block;
+    font: normal normal normal 12px/1 'pe-icon-7-stroke';
+    font-size: inherit;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: bottom;
+    -webkit-font-smoothing: antialiased;
+}
+
+nav i {
+    font-size: 32px;
+    width: 32px;
+    margin: 0px 10px;
+}
+
+
+body, nav, main, section, div, a, p, pre, h1 {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     line-height: 30px;
+    font-family: Roboto-regular;
+}
+
+h1 {
+    font-family: Roboto-regular;
+    font-size: 32px;
+    margin: 20px 30px;
 }
 
 nav {
@@ -15,22 +64,37 @@ nav {
     position: fixed;
     top: 0;
     bottom: 0;
-    background: #ddd;
     width: 250px;
     padding-top: 20px;
+    background: linear-gradient(to bottom, rgba(29, 199, 234, 1.0) 0%, rgba(29, 199, 234, 0.97) 50%, rgba(64, 145, 255, 0.85) 100%);
+}
+
+nav.back {
+    background: url('img/mobileye-mon.jpg')  bottom/cover;
 }
 
 nav a {
     width: 200px;
-    background: #ccc;
     margin: 5px 15px;
     padding: 10px 15px;
     border-radius: 4px;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: Arial, sans-serif;
-    font-weight: 600;
+    font-family: Roboto-medium, sans-serif;
     font-size: 12px;
+    color: white;
+    opacity: 0.9;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.13);
+    opacity: 1;
+}
+
+nav a.active {
+    color: #FFFFFF;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.23);
 }
 
 main {
@@ -42,8 +106,24 @@ main {
     overflow: auto;
 }
 
-#logs-table {
-    min-height: 300px;
-    border: 1 solid #222;
-    background: #def;
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+section#logs p {
+    padding-left: 65px;
+    text-indent: -50px;
+    background: #333;
+    color: #ccc;
+    font: 18px dec-terminal-modern;
+    cursor: pointer;
+    white-space: pre-wrap;
+}
+
+section#logs p:hover {
+    background: #444;
 }
