@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" href="style.css">
 <title>RSD Monitor</title>
+<script src="funcs.js"></script>
 </head>
 
 <body>
@@ -10,9 +11,9 @@
 <nav class="back"></nav> 
 
 <nav>
-<a href="#logs" class="active"><i>&#xe69d;</i>logs</a>
-<a href="#downloads"><i>&#xe68b;</i>downloads</a>
-<a href="#settings"><i>&#xe666;</i>settings</a>
+<a onclick="show('logs')" class="active"><i>&#xe69d;</i>logs</a>
+<a onclick="show('downloads')"><i>&#xe68b;</i>downloads</a>
+<a onclick="show('settings')"><i>&#xe666;</i>settings</a>
 </nav>
 
 <main>
@@ -32,11 +33,11 @@
 </section>
 
 <section id="downloads">
-    ...Downloads...
+    <h1>Downloads</h1>
 </section>
 
 <section id="settings">
-    ...Settings...
+    <h1>Settings</h1>
 </section>
 
 </main>
